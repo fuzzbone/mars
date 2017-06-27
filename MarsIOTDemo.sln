@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "Simulate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCloudToDevice", "SendCloudToDevice\SendCloudToDevice.csproj", "{818041BD-6FFB-4FC6-BD18-CCE952241A9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacialRecog", "FacialRecog\FacialRecog.csproj", "{3A25AED5-F777-469B-B799-41A159FA2EDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{818041BD-6FFB-4FC6-BD18-CCE952241A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{818041BD-6FFB-4FC6-BD18-CCE952241A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{818041BD-6FFB-4FC6-BD18-CCE952241A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A25AED5-F777-469B-B799-41A159FA2EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A25AED5-F777-469B-B799-41A159FA2EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A25AED5-F777-469B-B799-41A159FA2EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A25AED5-F777-469B-B799-41A159FA2EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

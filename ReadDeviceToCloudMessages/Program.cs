@@ -10,6 +10,7 @@ namespace ReadDeviceToCloudMessages
 {
     class Program
     {
+        // the following 2 lines will be replaced
         static string connectionString = "HostName=DannyS.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=63kQ8I2TzRau8ou6uRjK5Cp3oel1acGCPxcniJWtwIA=";
         static string iotHubD2cEndpoint = "messages/events";
         static EventHubClient eventHubClient;
@@ -40,7 +41,7 @@ namespace ReadDeviceToCloudMessages
 
         private static async Task ReceiveMessagesFromDeviceAsync(string partition, CancellationToken ct)
         {
-            var eventHubReceiver = eventHubClient.GetDefaultConsumerGroup().CreateReceiver(partition, DateTime.UtcNow);
+            var eventHubReceiver = eventHubClient.GetConsumerGroup("team01").CreateReceiver(partition, DateTime.UtcNow);
             while (true)
             {
                 if (ct.IsCancellationRequested) break;
