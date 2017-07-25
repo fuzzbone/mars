@@ -10,7 +10,7 @@ namespace SendCloudToDevice
     class Program
     {
         // the following will change
-        static string connectionString = "HostName=DannyS.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=63kQ8I2TzRau8ou6uRjK5Cp3oel1acGCPxcniJWtwIA=";
+        static string connectionString = "HostName=marsiotchi.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=";
         static ServiceClient serviceClient;
 
         static void Main(string[] args)
@@ -27,8 +27,9 @@ namespace SendCloudToDevice
         private async static Task SendCloudToDeviceMessageAsync()
         {
             //string message = "{\"Command\":\"\",\"Team\":\"\",\"Parameters\":\"\"}";
-            string message = "{\"Command\":\"Ping\",\"Team\":\"team01\",\"Parameters\":\"Pinging coffeepot\"}"; var commandMessage = new Message(Encoding.ASCII.GetBytes(message));
-            //string message = "{\"Command\":\"Brew\",\"Team\":\"team01\",\"Parameters\":\"\"}"; var commandMessage = new Message(Encoding.ASCII.GetBytes(message));
+            //string message = "{\"Command\":\"Ping\",\"Team\":\"team01\",\"Parameters\":\"Pinging coffeepot\"}"; 
+            string message = "{\"Command\":\"Brew\",\"Team\":\"team03\",\"Parameters\":\"hello world\"}"; var commandMessage = new Message(Encoding.ASCII.GetBytes(message));
+           // var commandMessage = new Message(Encoding.ASCII.GetBytes(message));
             commandMessage.Ack = DeliveryAcknowledgement.Full;
             ReceiveFeedbackAsync();
             await serviceClient.SendAsync("coffeepot", commandMessage);

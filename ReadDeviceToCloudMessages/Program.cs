@@ -11,7 +11,7 @@ namespace ReadDeviceToCloudMessages
     class Program
     {
         // the following 2 lines will be replaced
-        static string connectionString = "HostName=DannyS.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=63kQ8I2TzRau8ou6uRjK5Cp3oel1acGCPxcniJWtwIA=";
+        static string connectionString = "HostName=marsiotchi.azure-devices.net;SharedAccessKeyName=coffeeclient;SharedAccessKey=rwKwYhCLhsuB1L6Hs8STUVf/EuSPBPQWmN5SjKGWvkg=";
         static string iotHubD2cEndpoint = "messages/events";
         static EventHubClient eventHubClient;
 
